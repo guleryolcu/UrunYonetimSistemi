@@ -1,0 +1,13 @@
+﻿@model UrunYonetimSistemi.Models.Product
+
+<h2>Silme Onayı</h2>
+
+<h4>@Model.Name</h4>
+<p><strong>Fiyat:</strong> @Model.Price ₺</p>
+<p><strong>Açıklama:</strong> @Model.Description</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>
